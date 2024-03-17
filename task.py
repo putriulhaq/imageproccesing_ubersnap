@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 import cv2
 import os
-import imghdr
 
 app = Flask(__name__)
 
@@ -66,7 +65,7 @@ def compres():
 
 
 # get versi OpenCV
-# print("Versi OpenCV yang terinstal:", cv2.__version__)
+print("Installed OpenCV version:", cv2.__version__)
 
 
 if __name__ == '__main__':
