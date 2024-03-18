@@ -28,7 +28,7 @@ def validation_check(image_path): #if path is valid
 
 @app.route('/convert_to_jpg', methods=['POST'])
 def convert_to_jpg():
-    image_file = request.args.get("image")
+    image_file = request.form.get("image")
     validation = validation_check(image_file)
     if validation is True:
         convertImage(image_file)
