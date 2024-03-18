@@ -12,11 +12,59 @@ This repository contains a Python backend service dedicated to image processing 
 
 1. _Clone the Repository_:
 
-   bash
-   git clone https://github.com/putriulhaq/imageproccesing_ubersnap.git
+   ```
+   git clone -b master  https://github.com/putriulhaq/imageproccesing_ubersnap.git
+   ```
 
-2. _Install Dependencies_:
+3. _Install Dependencies_:
 
-   bash
+   ```
    cd task_ubersnap
    pip install -r requirements.txt
+   ```
+
+4. _Run the Flask App_:
+
+   ```
+   python task.py
+   ```
+*The service will be accessible at http://localhost:5000*
+
+### Convert PNG to JPEG
+
+1. *Open Postman*.
+2. *Create a POST request*.
+3. *Set the request URL*: http://localhost:5000/convert_to_jpg.
+4. *Select the body type as form-data*.
+5. *Add a key-value pair*:
+   - Key: image
+   - Value: Path to your PNG image file.
+6. *Send the request*.
+7. Verify the response to ensure successful conversion.
+
+### Resize Images
+
+1. *Open Postman*.
+2. *Create a POST request*.
+3. *Set the request URL*: http://localhost:5000/resize_image.
+4. *Select the body type as form-data*.
+5. *Add key-value pairs*:
+   - Key: image,  Value: Path to your image file.
+   - Key: width,  Value: Desired width.
+   - Key: height, Value: Desired height.
+6. *Send the request*.
+7. Verify the response to ensure successful resizing.
+
+### Compress Images
+
+1. *Open Postman*.
+2. *Create a POST request*.
+3. *Set the request URL*: http://localhost:5000/compress.
+4. *Select the body type as form-data*.
+5. *Add key-value pairs*:
+   - Key: image,    Value: Path to your image file.
+   - Key: quality,  Value: Compression quality (0-100).
+6. *Send the request*.
+7. Verify the response to ensure successful compression.
+
+
